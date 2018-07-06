@@ -1,0 +1,136 @@
+<div class="content">
+    <mat-card class="example-card">
+      <mat-card-header>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-title style="display: block; text-align: center">Editar Usuário
+        </mat-card-title>
+        <button mat-fab color="primary" style="margin: -22px; float: right;" matTooltip="Adicione Animais">
+          <span class="material-icons iconAdd">
+            person
+          </span>
+        </button>
+      </mat-card-content>
+    </mat-card>
+    <form [formGroup]="editUserInformation" (ngSubmit)="onUpdate()">
+      <mat-card class="example-card" style="margin-top: 25px;">
+        <mat-card-header>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Dados do Usuário
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Edite aqui seus dados
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <mat-form-field style="display:none" class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userToken"
+                    placeholder="Token"
+                    name="token"
+                  >
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userProviderId"
+                    placeholder="Provedor"
+                    name="providerIdUser"
+                    readonly
+                  >
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userName"
+                    placeholder="Nome"
+                    name="nameUser"                   
+                  >
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userEmail"
+                    placeholder="E-mail"
+                    name="emailUser"
+                    readonly
+                  >
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userCity"
+                    placeholder="Cidade"
+                    name="cityUser"
+                  >
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <mat-select 
+                  formControlName="userState"
+                  placeholder="Estado"
+                  name="stateUser"
+                  >
+                    <mat-option value="PR">PR</mat-option>
+                    <mat-option value="MG">MG</mat-option>
+                    <mat-option value="SP">SP</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userAbout"
+                    placeholder="Sobre"
+                    name="aboutUser"
+                  >
+                </mat-form-field>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Foto do Usuário
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    insira aqui sua foto
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <img 
+                class="image" [src]="img.value"
+              >
+              <mat-form-field class="input-full-width">
+                  <input
+                  #img
+                    matInput
+                    formControlName="userPhoto"
+                    placeholder="URL da Imagem"
+                    name="photoUser"
+                  >
+                </mat-form-field>
+               
+                <!-- <mat-form-field class="input-full-width">
+                  <input
+                    matInput
+                    formControlName="userPhoto"
+                    placeholder="URL"
+                    name="photoUser"
+                  >
+                </mat-form-field> -->
+              </mat-expansion-panel>
+            </mat-accordion>
+            <button 
+            mat-raised-button 
+            class="search-btn" 
+            style="margin: 35px auto; margin-bottom: 5px;" 
+            color="primary"
+            [disabled]="!editUserInformation.valid"
+            type="submit">Salvar Edição
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </form>
+</div>
+    

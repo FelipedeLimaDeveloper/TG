@@ -1,0 +1,66 @@
+<div class="content">
+ 
+ 
+  <mat-card class="example-card">
+      <mat-card-content>
+          <p style='font-family: Roboto,"Helvetica Neue",sans-serif'>Busca por Animais</p>
+          <p style='font-family: Roboto,"Helvetica Neue",sans-serif'>Qual tipo de busca gostaria de fazer?</p>
+        <h2 class="example-h2">Seletores de Busca</h2>
+          <section class="example-section">
+              <label class="example-margin">Filtros:</label>
+              <mat-radio-group [(ngModel)]="type" (change)="ngOnInit()">
+                <mat-radio-button class="example-margin" value="animalBreed">
+                    Raça
+                </mat-radio-button>
+                <mat-radio-button class="example-margin" value="animalName">
+                    Nome
+                </mat-radio-button>
+              </mat-radio-group>
+            </section>
+        <mat-form-field class="example-full-width">
+          <input matInput #texto placeholder="Busca por Raça" value="Manga Larga" [(ngModel)]="filter">
+        </mat-form-field>
+        <button mat-raised-button class="search-btn" (click)="texto.value=''" (click)="filterExact(type,filter)" color="primary">Buscar Animais</button>
+      </mat-card-content>
+    </mat-card>
+
+    <ul class="itemListaUL">
+        <li class="itemLista" *ngFor="let myAnimal of  this.filteredAnimals">
+            <mat-card class="example-card"  *ngIf='myAnimal.animalStatus == "ATIVO" && this.authService.getUser().userProviderId != myAnimal.animalUserId'>
+                <mat-card-header>
+                </mat-card-header>
+                <img mat-card-image [src]="myAnimal.animalPhotos">
+                <mat-card-content>
+                   <p id="cavalo-nome"><b>Cavalo: </b>{{myAnimal.animalName}}</p>
+                   <p id="cavalo-nome-second"><b>Apelido: </b>{{myAnimal.animalNickname}}</p>
+                   <p id="cavalo-nome-second"><b>Nascimento: </b>{{myAnimal.animalBorn | date}}</p>
+                   <p id="cavalo-nome-second"><b>Raça: </b>{{myAnimal.animalBreed}}</p>
+                   <p id="cavalo-nome-second"><b>Peso: </b>{{myAnimal.animalHeight}}</p>
+                   <p id="cavalo-nome-second"><b>Cor: </b>{{myAnimal.animalColor}}</p>
+                   <p id="cavalo-nome-second"><b>Nacionalidade: </b>{{myAnimal.animalNationality}}</p>
+                   <p id="cavalo-nome-second"><b>Prêmios: </b>{{myAnimal.animalPrizes}}</p>
+                   <p id="cavalo-nome-second"><b>Ascendência: </b>{{myAnimal.animalAscending}}</p>
+                   <p id="cavalo-nome-second"><b>Características: </b>{{myAnimal.animalFeatures}}</p>
+                   <p id="cavalo-nome-second"><b>Telefone do Dono: </b>{{myAnimal.animalOwnerPhone}}</p>
+                   <p id="cavalo-nome-second"><b>Sobre o animal: </b>{{myAnimal.animalAbout}}</p>
+                   <button mat-fab color="primary" 
+                      style="margin: -22px; float: right;"  
+                      matTooltip="Adicione Animais"
+                      (click)="viewAnimal(myAnimal)"
+                   >
+                      <span class="material-icons iconAdd">
+                        star
+                      </span></button> 
+                </mat-card-content>
+              </mat-card>
+        </li>
+      </ul>
+      </div>
+   
+
+
+   <!-- <select class="combo" [(ngModel)]="type">
+            <option value="animalBreed">Raça</option>
+            <option value="animalName">Nome</option>
+          </select>
+        <br> --> 

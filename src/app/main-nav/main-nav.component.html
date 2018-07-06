@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()"
+      *ngIf="isHandset$ | async">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>Horse Power</span>
+  </mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary" >Menu</mat-toolbar>
+    <mat-nav-list (click)="drawer.opened='false'">
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/home">Home</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/editUser">Editar Usuário</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/addAnimmal">Cadastrar Animal</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/userAnimals">Gerenciar Animais</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/searchAnimals">Buscar Animais</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/userBookmarks">Gerenciar Favoritos</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/userMessages">Mensagens</a>
+      <a mat-list-item (click)=" ClickMenu()" *ngIf="isLoggedIn$ | async" routerLink="/login" (click)="logout()">Logout</a>
+      <a mat-list-item routerLink="">Sobre</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+   <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

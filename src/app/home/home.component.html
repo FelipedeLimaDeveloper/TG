@@ -1,0 +1,17 @@
+<div class="content" style="height: 554px;">
+    
+    <img class="dashboard-first" src="http://animatedloops.com/wp-content/uploads/2017/08/gif-horse-walking.gif">
+    <img class="logo" src="../../assets/logo.png">
+    
+    <p style='font-family: Roboto,"Helvetica Neue",sans-serif; text-align: center; font-size: 20px' *ngIf="this.isFirstTime$ | async"><b>Bem Vindo!</b></p>
+    <div class="btn-circle">
+      <button mat-fab color="primary" style="margin: 2px" routerLink="/searchAnimals"  matTooltip="Pesquisar Animais">
+        <i class="material-icons iconAdd">
+          search
+        </i></button>
+      <button mat-fab color="primary" style="margin: 2px" routerLink="/addAnimmal"  matTooltip="Adicione Animais">
+      <i class="material-icons iconAdd">
+        add
+      </i></button> 
+    </div>
+</div>

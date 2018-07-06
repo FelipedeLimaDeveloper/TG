@@ -1,0 +1,186 @@
+<div class="content">
+  <mat-card class="example-card">
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card-title style="display: block; text-align: center">Cadastrar Animal
+      </mat-card-title>
+      <button mat-fab color="primary" style="margin: -22px; float: right;" matTooltip="Adicione Animais">
+        <span class="material-icons iconAdd">
+          add
+        </span>
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  <form [formGroup]="animalInformationForm" (ngSubmit)="onSubmit()">
+    <mat-card class="example-card" style="margin-top: 25px;">
+      <mat-card-header>
+      </mat-card-header>
+      <mat-card-content>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Informações do Animal
+                </mat-panel-title>
+                <mat-panel-description>
+                  Insira aqui as Informações
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalName"
+                  placeholder="Nome"
+                  name="nameAnimal"
+                 
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalNickname"
+                  placeholder="Apelido"
+                  name="nicknameAnimal"
+                
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                  <input
+                  matInput
+                  type="date"
+                  name="bornAnimal"
+                  formControlName="animalBorn"
+                 
+                  
+                  placeholder="Data de Nascimento"
+              >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalBreed"
+                  placeholder="Raça"
+                  name="breedAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalColor"
+                  placeholder="Cor"
+                  name="colorAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalHeight"
+                  placeholder="Peso"
+                  name="heightAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalNationality"
+                  placeholder="Nacionalidade"
+                  name="nationalityAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalAscending"
+                  placeholder="Ascendencia"
+                  name="ascendingAnimal"
+              >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalFeatures"
+                  placeholder="Características"
+                  name="featuresAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalPrizes"
+                  placeholder="Prêmios animal"
+                  name="aboutAnimal"
+                >
+              </mat-form-field>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalAbout"
+                  placeholder="Sobre o animal"
+                  name="aboutAnimal"
+                >
+              </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Foto do Animal
+                </mat-panel-title>
+                <mat-panel-description>
+                  Edite aqui a Foto do animal
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <img 
+                class="image" [src]="img.value"
+              >
+              <mat-form-field class="input-full-width">
+                  <input
+                  #img
+                    matInput
+                    formControlName="animalPhotos"
+                    placeholder="URL da Imagem"
+                    name="photoAnimal"
+                  >
+                </mat-form-field>
+              <!-- <i class="material-icons" 
+              style="font-size: 55px; margin: 5px auto; margin-bottom: -8px; display: table">
+                add_photo_alternate
+              </i> -->
+              <!-- <p style="margin-top: 3px">
+                <b>Adicionar Imagem</b>
+              </p> -->
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header style="padding-top: 8px; padding-bottom: 8px">
+                <mat-panel-title >
+                  Informações do dono
+                </mat-panel-title>
+                <mat-panel-description>
+                  Edite aqui seu telefone para contato
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-form-field class="input-full-width">
+                <input
+                  matInput
+                  formControlName="animalOwnerPhone"
+                  placeholder="Telefone"
+                  name="ownerPhoneAnimal"
+                  type="tel"
+                >
+              </mat-form-field>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <button 
+            mat-raised-button 
+            class="search-btn" 
+            style="margin: 35px auto; margin-bottom: 5px;" 
+            color="primary"
+            [disabled]="animalInformationForm.valid"
+            type="submit"
+            >Salvar Edição
+          </button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

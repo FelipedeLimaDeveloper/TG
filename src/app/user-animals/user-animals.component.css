@@ -1,0 +1,248 @@
+
+
+.btn-circle {
+  padding-top: 290px;
+  padding-left: 200px;
+}
+
+.dashboard-first {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0px auto;
+}
+
+.logo {
+  display: block;
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0px auto;
+}
+
+
+.search-btn {
+  display: block;
+  margin: 0px auto;
+}
+
+.example-radio-group {
+  display: inline-table;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+.example-full-width {
+    padding: 30px;
+    width: 80%;
+}
+.example-medium-width {
+  padding: 30px;
+  width: 80%;
+}
+.example-check-button {
+  margin: 0 10px;
+}
+.content-check {
+  display: inline-table;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 20px;
+  padding: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+
+.content {
+  padding: 15px;
+  /* background-color: rgba(211, 211, 211, 0.164); */
+  max-height: auto;
+  
+}
+
+.content-form {
+  padding: 3px;
+  background-color: rgba(211, 211, 211, 0.164);
+  height: 600px;
+}
+.content-form2 {
+  padding: 15px;
+  background-color: rgba(211, 211, 211, 0.164);
+
+}
+
+#cavalo-nome {
+  margin-top: 3px;
+  margin-bottom: -10px;
+  align-content: center;
+  display: -webkit-box;
+  margin-right: 5px;
+}
+
+#cavalo-nome-second {
+  
+  margin-bottom: -10px;
+  display: -webkit-box;
+  margin-right: 5px;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 6px 6px rgba(0,0,0,.24);
+}
+
+.mat-card-image {
+  margin: 0px auto;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  display: block;
+  margin-bottom: 10px;
+}
+.image {
+  margin: 0px auto;
+  width: auto;
+  height: auto;
+  max-width: 220px;
+  max-height:220px;
+  display: block;
+}
+
+
+
+.mat-h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.example-card {
+  max-height: 280px;
+  height: auto;
+  width: auto;
+  margin: 0px auto;
+  max-height: 800px;
+  
+}
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_3BSy4Fj2A9cEewqEunptEL3Bl8OJK8BX0Cw5hb8cbGXokgL');
+  background-size: cover;
+}
+
+p {
+  text-align: center
+}
+
+.btn-login {
+  /* max-width: 400px; */
+  /* background-color: black; */
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  position: relative;
+  margin: 0px auto;
+  
+}
+.btn-login > p {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.btn-login > img {
+  margin: 2px auto;
+  position: relative;
+  display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+}
+
+
+.itemLista {
+  margin-bottom: 25px;
+}
+
+.itemListaUL {
+  padding: 0px;
+  list-style-type: none;
+}
+
+
+
+/* #cavalo-nome {
+  margin-top: 3px;
+  margin-bottom: -10px;
+}
+
+#cavalo-nome-second {
+  
+  margin-bottom: -10px;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.mat-card-image {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.mat-h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin: 0px auto;
+  
+}
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_3BSy4Fj2A9cEewqEunptEL3Bl8OJK8BX0Cw5hb8cbGXokgL');
+  background-size: cover;
+}
+
+p {
+  text-align: center
+}
+
+.btn-login {
+
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  position: relative;
+  margin: 0px auto;
+  
+}
+.btn-login > p {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.btn-login > img {
+  margin: 2px auto;
+  position: relative;
+  display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+}
+ */

@@ -1,0 +1,71 @@
+.login-form{
+  margin-top: 20px;
+}
+
+
+#cavalo-nome {
+  margin-top: 3px;
+  margin-bottom: -10px;
+}
+
+#cavalo-nome-second {
+  
+  margin-bottom: -10px;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.mat-card-image {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.mat-h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin: 0px auto;
+  
+}
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_3BSy4Fj2A9cEewqEunptEL3Bl8OJK8BX0Cw5hb8cbGXokgL');
+  background-size: cover;
+}
+
+p {
+  text-align: center
+}
+
+.btn-login {
+
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  position: relative;
+  margin: 0px auto;
+  
+}
+.btn-login > p {
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.btn-login > img {
+  margin: 2px auto;
+  position: relative;
+  display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+}

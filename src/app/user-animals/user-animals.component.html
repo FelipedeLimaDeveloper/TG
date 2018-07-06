@@ -1,0 +1,52 @@
+<div class="content">
+    <mat-card class="example-card">
+      <mat-card-header>
+          <div mat-card-avatar  [ngStyle]="{'background-image': 'url(' + this.userService.getRealUser().userPhoto + ')'}" class="example-header-image"></div>
+          <mat-card-title>{{this.userService.getRealUser().userName}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <mat-card-title style="display: block; text-align: center">Seus Animais
+            </mat-card-title>
+            <button mat-fab color="primary" style="margin: -22px; float: right;"  matTooltip="Adicione Animais">
+                <span class="material-icons iconAdd">
+                    info
+                </span></button> 
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+<div class="content">
+  <ul class="itemListaUL">
+    <li class="itemLista" *ngFor="let myAnimal of  this.animaisObj">
+        <mat-card class="example-card" *ngIf="this.user.userProviderId == myAnimal.animalUserId">
+            <mat-card-header>
+            </mat-card-header>
+            <img mat-card-image [src]="myAnimal.animalPhotos">
+            <mat-card-content>
+               <p id="cavalo-nome"><b>Cavalo: </b>{{myAnimal.animalName}}</p>
+               <p id="cavalo-nome-second"><b>Apelido: </b>{{myAnimal.animalNickname}}</p>
+               <p id="cavalo-nome-second"><b>Nascimento: </b>{{myAnimal.animalBorn | date}}</p>
+               <p id="cavalo-nome-second"><b>Raça: </b>{{myAnimal.animalBreed}}</p>
+               <p id="cavalo-nome-second"><b>Peso: </b>{{myAnimal.animalHeight}}</p>
+               <p id="cavalo-nome-second"><b>Cor: </b>{{myAnimal.animalColor}}</p>
+               <p id="cavalo-nome-second"><b>Nacionalidade: </b>{{myAnimal.animalNationality}}</p>
+               <p id="cavalo-nome-second"><b>Prêmios: </b>{{myAnimal.animalPrizes}}</p>
+               <p id="cavalo-nome-second"><b>Ascendência: </b>{{myAnimal.animalAscending}}</p>
+               <p id="cavalo-nome-second"><b>Características: </b>{{myAnimal.animalFeatures}}</p>
+               <p id="cavalo-nome-second"><b>Sobre o animal: </b>{{myAnimal.animalAbout}}</p>
+              
+               <button mat-fab color="primary" 
+                  style="margin: -22px; float: right;"  
+                  matTooltip="Adicione Animais"
+                  (click)="viewAnimal(myAnimal)"
+               >
+                  <span class="material-icons iconAdd">
+                    edit
+                  </span></button> 
+            </mat-card-content>
+          </mat-card>
+    </li>
+  </ul>
+   
+  </div>
